@@ -39,14 +39,19 @@ List * createList() {
 void * firstList(List * list) {
   if(list -> current != NULL)
   {
-    void* data =  list -> current -> data;
+    void *data =  list -> current -> data;
     list -> current = list -> current -> next;
   }
   else return NULL;
 }
 
 void * nextList(List * list) {
-    return NULL;
+  if(list -> current != NULL)
+    {
+      void *data =  list -> current -> next -> data;
+      list -> current = list -> current -> next;
+    }
+    else return NULL;
 }
 
 void * lastList(List * list) {

@@ -155,3 +155,26 @@ list.c:46:1: error: control reaches end of non-void function [-Werror=return-typ
 cc1: all warnings being treated as errors
 Compilation failed
 f90b6aa
+Sat 30 Mar 2024 02:54:33 AM UTC: 
+ list.c | 7 ++++++-
+ 1 file changed, 6 insertions(+), 1 deletion(-)
+In file included from test.c:5:
+list.c: In function ‘firstList’:
+list.c:42:11: error: unused variable ‘data’ [-Werror=unused-variable]
+   42 |     void *data =  list -> current -> data;
+      |           ^~~~
+list.c: In function ‘nextList’:
+list.c:51:13: error: unused variable ‘data’ [-Werror=unused-variable]
+   51 |       void *data =  list -> current -> next -> data;
+      |             ^~~~
+list.c: In function ‘firstList’:
+list.c:46:1: error: control reaches end of non-void function [-Werror=return-type]
+   46 | }
+      | ^
+list.c: In function ‘nextList’:
+list.c:55:1: error: control reaches end of non-void function [-Werror=return-type]
+   55 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+ce5320b
