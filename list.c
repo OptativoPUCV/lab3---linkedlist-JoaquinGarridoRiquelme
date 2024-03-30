@@ -80,7 +80,11 @@ void pushFront(List * list, void * dato) {
     list -> head = nuevo_nodo;
   }
   else
+  {
     list -> head = nuevo_nodo;
+    list -> tail = nuevo_nodo;
+  }
+  
 }
 
 void pushBack(List * list, void * data) {
