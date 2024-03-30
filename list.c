@@ -118,7 +118,7 @@ void * popCurrent(List * list) {
   void *dato = aux -> data;
   aux -> prev -> next = aux -> next;
   aux -> next -> prev = aux -> prev;
-  list -> current = aux -> next;
+  list -> current = aux -> prev;
   return dato;
 }
 
