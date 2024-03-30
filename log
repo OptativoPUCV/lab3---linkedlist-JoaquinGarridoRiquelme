@@ -4,3 +4,20 @@ Sat 30 Mar 2024 02:36:42 AM UTC:
  tests:  1|5
 total_score: 10/70
 a769362
+Sat 30 Mar 2024 02:38:51 AM UTC: 
+ list.c | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+In file included from test.c:5:
+list.c: In function ‘firstList’:
+list.c:40:8: error: variable or field ‘dato’ declared void
+   40 |   void dato = list -> current -> data;
+      |        ^~~~
+list.c:40:15: error: initialization of ‘int’ from ‘void *’ makes integer from pointer without a cast [-Werror=int-conversion]
+   40 |   void dato = list -> current -> data;
+      |               ^~~~
+list.c:41:10: error: returning ‘int’ from a function with return type ‘void *’ makes pointer from integer without a cast [-Werror=int-conversion]
+   41 |   return dato;
+      |          ^~~~
+cc1: all warnings being treated as errors
+Compilation failed
+ffa75c8
