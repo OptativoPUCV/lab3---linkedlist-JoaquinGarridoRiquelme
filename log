@@ -38,3 +38,20 @@ list.c:42:1: error: control reaches end of non-void function [-Werror=return-typ
 cc1: all warnings being treated as errors
 Compilation failed
 f379a22
+Sat 30 Mar 2024 02:41:28 AM UTC: 
+ list.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+list.c: In function ‘firstList’:
+list.c:40:15: error: initialization of ‘List *’ {aka ‘struct List *’} from incompatible pointer type ‘Node *’ [-Werror=incompatible-pointer-types]
+   40 |   List* aux = list -> head;
+      |               ^~~~
+list.c:41:14: error: ‘List’ {aka ‘struct List’} has no member named ‘data’
+   41 |   return aux -> data;
+      |              ^~
+list.c:42:1: error: control reaches end of non-void function [-Werror=return-type]
+   42 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+14c89a3
