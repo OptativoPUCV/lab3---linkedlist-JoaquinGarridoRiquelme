@@ -115,13 +115,13 @@ void * popBack(List * list) {
 void * popCurrent(List * list) {
   if(list -> current == NULL) return NULL;
   Node *aux = list -> current;
+  void *dato = aux -> data;
   //Si queremos eliminar el primer nodo
   if(aux == list -> head)
   {
     list -> head = aux -> next;
     list -> current = aux -> next;
     aux -> next -> prev = NULL;
-    return aux -> data;
   }
   //Si queremos eliminar un dato de el medio
   else
@@ -129,8 +129,9 @@ void * popCurrent(List * list) {
     aux -> prev -> next = aux -> next;
     aux -> next -> prev = aux -> prev;
     list -> current = aux -> next;
-    return aux -> data;
   }
+  free(aux);
+  return dato;
 }
 
 void cleanList(List * list) {
