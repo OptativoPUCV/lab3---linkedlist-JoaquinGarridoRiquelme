@@ -123,8 +123,16 @@ void * popCurrent(List * list) {
     list -> current = aux -> next;
     aux -> next -> prev = NULL;
   }
+  //Si queremos eliminar la cola de la lista
+  if(aux == list -> tail)
+  {
+    aux -> prev -> next = NULL;
+    list -> tail = aux -> prev;
+    list -> current = aux -> prev;
+  }
+    
   //Si queremos eliminar un dato de el medio
-  else
+  else 
   {
     aux -> prev -> next = aux -> next;
     aux -> next -> prev = aux -> prev;
