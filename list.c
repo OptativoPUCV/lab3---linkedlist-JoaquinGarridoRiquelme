@@ -41,6 +41,7 @@ void * firstList(List * list) {
   {
     void *data =  list -> current -> data;
     list -> current = list -> current -> next;
+    return data;
   }
   else return NULL;
 }
