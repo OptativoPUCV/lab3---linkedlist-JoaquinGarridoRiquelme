@@ -309,3 +309,8 @@ list.c:58:11: error: assignment to ‘Node *’ from ‘int’ makes pointer fro
 cc1: all warnings being treated as errors
 Compilation failed
 b0fd44c
+Sat 30 Mar 2024 03:31:45 AM UTC: 
+ list.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  0|0
+f7fd7c8
