@@ -21,3 +21,20 @@ list.c:41:10: error: returning ‘int’ from a function with return type ‘voi
 cc1: all warnings being treated as errors
 Compilation failed
 ffa75c8
+Sat 30 Mar 2024 02:39:51 AM UTC: 
+ list.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+In file included from test.c:5:
+list.c: In function ‘firstList’:
+list.c:40:15: error: initialization of ‘List *’ {aka ‘struct List *’} from incompatible pointer type ‘Node *’ [-Werror=incompatible-pointer-types]
+   40 |   List* aux = list -> current;
+      |               ^~~~
+list.c:41:14: error: ‘List’ {aka ‘struct List’} has no member named ‘data’
+   41 |   return aux -> data;
+      |              ^~
+list.c:42:1: error: control reaches end of non-void function [-Werror=return-type]
+   42 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+f379a22
