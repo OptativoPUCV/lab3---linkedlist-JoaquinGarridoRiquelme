@@ -106,3 +106,17 @@ list.c:41:18: error: assignment to ‘Node *’ from incompatible pointer type �
 cc1: all warnings being treated as errors
 Compilation failed
 411572f
+Sat 30 Mar 2024 02:48:46 AM UTC: 
+ list.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+list.c: In function ‘firstList’:
+list.c:40:15: error: initialization of ‘List *’ {aka ‘struct List *’} from incompatible pointer type ‘Node *’ [-Werror=incompatible-pointer-types]
+   40 |   List* aux = list -> head;
+      |               ^~~~
+list.c:40:9: error: unused variable ‘aux’ [-Werror=unused-variable]
+   40 |   List* aux = list -> head;
+      |         ^~~
+cc1: all warnings being treated as errors
+Compilation failed
+148ce37
