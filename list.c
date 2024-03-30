@@ -124,7 +124,7 @@ void * popCurrent(List * list) {
     aux -> next -> prev = NULL;
   }
   //Si queremos eliminar la cola de la lista
-  if(aux == list -> tail)
+  else if(aux == list -> tail)
   {
     aux -> prev -> next = NULL;
     list -> tail = aux -> prev;
