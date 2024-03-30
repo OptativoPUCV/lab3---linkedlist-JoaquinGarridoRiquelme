@@ -120,7 +120,7 @@ void * popCurrent(List * list) {
   {
     list -> head = aux -> next;
     list -> current = aux -> next;
-    aux -> next -> prev == NULL;
+    aux -> next -> prev = NULL;
     return aux -> data;
   }
   //Si queremos eliminar un dato de el medio
