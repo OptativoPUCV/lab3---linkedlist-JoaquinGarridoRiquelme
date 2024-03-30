@@ -295,3 +295,17 @@ Sat 30 Mar 2024 03:28:06 AM UTC:
  tests:  5|4
 total_score: 25/70
 abbecf7
+Sat 30 Mar 2024 03:31:27 AM UTC: 
+ list.c | 10 +++++++++-
+ 1 file changed, 9 insertions(+), 1 deletion(-)
+In file included from test.c:5:
+list.c: In function ‘lastList’:
+list.c:58:13: error: implicit declaration of function ‘next’ [-Werror=implicit-function-declaration]
+   58 |       aux = next();
+      |             ^~~~
+list.c:58:11: error: assignment to ‘Node *’ from ‘int’ makes pointer from integer without a cast [-Werror=int-conversion]
+   58 |       aux = next();
+      |           ^
+cc1: all warnings being treated as errors
+Compilation failed
+b0fd44c
