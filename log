@@ -72,3 +72,23 @@ list.c:43:1: error: control reaches end of non-void function [-Werror=return-typ
 cc1: all warnings being treated as errors
 Compilation failed
 a1b781a
+Sat 30 Mar 2024 02:44:47 AM UTC: 
+ list.c | 1 +
+ 1 file changed, 1 insertion(+)
+In file included from test.c:5:
+list.c: In function ‘firstList’:
+list.c:41:7: error: assignment to ‘List *’ {aka ‘struct List *’} from incompatible pointer type ‘Node *’ [-Werror=incompatible-pointer-types]
+   41 |   aux = list -> head;
+      |       ^
+list.c:42:18: error: assignment to ‘Node *’ from incompatible pointer type ‘List *’ {aka ‘struct List *’} [-Werror=incompatible-pointer-types]
+   42 |   aux -> current = aux;
+      |                  ^
+list.c:43:14: error: ‘List’ {aka ‘struct List’} has no member named ‘data’
+   43 |   return aux -> data;
+      |              ^~
+list.c:44:1: error: control reaches end of non-void function [-Werror=return-type]
+   44 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+b181578

@@ -39,6 +39,7 @@ List * createList() {
 void * firstList(List * list) {
   List* aux = malloc(sizeof(List));
   aux = list -> head;
+  aux -> current = aux;
   return aux -> data;
 }
 
