@@ -314,3 +314,14 @@ Sat 30 Mar 2024 03:31:45 AM UTC:
  1 file changed, 1 insertion(+), 1 deletion(-)
  tests:  0|0
 f7fd7c8
+Sat 30 Mar 2024 03:35:43 AM UTC: 
+ list.c | 9 ++-------
+ 1 file changed, 2 insertions(+), 7 deletions(-)
+In file included from test.c:5:
+list.c: In function ‘lastList’:
+list.c:60:1: error: control reaches end of non-void function [-Werror=return-type]
+   60 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+2f2c1aa
